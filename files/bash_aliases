@@ -1,0 +1,23 @@
+alias aqi='screen -r aqi'
+alias temp='screen -r temp'
+alias camera='screen -r camera'
+
+alias log='tail -n 100 -f /var/log/syslog'
+alias die='sudo poweroff'
+
+alias rpiVolt='/opt/vc/bin/vcgencmd measure_volts'
+alias rpiTemp='/opt/vc/bin/vcgencmd measure_temp'
+alias rpiTempc='watch -n 0.5 /opt/vc/bin/vcgencmd measure_temp'
+
+alias ..='cd ..'
+alias app='sudo apt install $@'
+alias up='sudo apt update && sudo apt upgrade'
+alias fuck='kill -9 $(pgrep -f $last)'
+alias psa='ps aux'
+alias psg='ps aux |grep'
+alias n='nano'
+alias sn='sudo nano'
+alias ls='ls --color -h --group-directories-first -v'
+alias lsa='ls -allh'
+alias lsag='ls -all |grep'
+alias lsd='ls -ald ./*/'
