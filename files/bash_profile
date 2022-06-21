@@ -1,0 +1,16 @@
+clear
+
+echo -e "Sensorbox v.1.0 \n"
+if [[ $SSH_CONNECTION != "" ]]; then
+        neofetch
+        echo " "
+fi
+
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi
+echo " "
+
+/opt/vc/bin/vcgencmd measure_temp
+
+echo " "
