@@ -1,21 +1,32 @@
 #!/bin/bash
+MY_PATH=$(dirname "$0")
+MY_PATH=$(cd "$MY_PATH" && pwd)
 
 #
 # bash profile and aliases
 #
 
-BASH_ALIASES=files/bash_aliases
-BASH_PROFILE=files/bash_profile
+BASH_ALIASES="$MY_PATH/files/bash_aliases"
+BASH_PROFILE="$MY_PATH/files/bash_profile"
 
 echo -e "-> adding bash profile\n"
 
 if [ -f "$BASH_ALIASES" ]; then
+    if [ -f $HOME/.bash_aliases ]; then
+        mv $HOME/.bash_aliases $HOME/.bash_aliases.old
+    fi
+
     mv $BASH_ALIASES $HOME/.bash_aliases
 fi
 
 if [ -f "$BASH_PROFILE" ]; then
+    if [ -f $HOME/.bash_profile ]; then
+        mv $HOME/.bash_profile $HOME/.bash_profile.old
+    fi
+
     mv $BASH_PROFILE $HOME/.bash_profile
 fi
+
 
 # reloading bash
 source $HOME/.bashrc
