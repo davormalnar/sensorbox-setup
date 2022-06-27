@@ -5,7 +5,7 @@ This is a setup script for **[Sensorbox station](https://github.com/davormalnar/
 ## How to install ? ###
 
 * fetch install script and extract it:
-    * `wget -c  https://github.com/davormalnar/sensorbox-setup/archive/refs/tags/install.tar.gz && sudo tar -xzf install.tar.gz -C $HOME/`
+    * `wget -c  https://github.com/davormalnar/sensorbox-setup/archive/refs/tags/install.tar.gz && tar -xzf install.tar.gz -C $HOME/`
 
 
 * run the script with (**non root** privileges)
