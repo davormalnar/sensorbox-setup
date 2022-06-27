@@ -12,7 +12,7 @@ BASH_PROFILE="$MY_PATH/files/bash_profile"
 echo -e "-> adding bash profile\n"
 
 if [ -f "$BASH_ALIASES" ]; then
-    if [ -f $HOME/.bash_aliases ]; then
+    if [ -f "$HOME/.bash_aliases" ]; then
         mv $HOME/.bash_aliases $HOME/.bash_aliases.old
     fi
 
@@ -20,7 +20,7 @@ if [ -f "$BASH_ALIASES" ]; then
 fi
 
 if [ -f "$BASH_PROFILE" ]; then
-    if [ -f $HOME/.bash_profile ]; then
+    if [ -f "$HOME/.bash_profile" ]; then
         mv $HOME/.bash_profile $HOME/.bash_profile.old
     fi
 
@@ -87,7 +87,14 @@ sudo pip3 install pyserial smbus pymongo meteocalc pyyaml
 
 echo -e "-> fetching GIT repo\n"
 cd $HOME
-git clone https://github.com/davormalnar/sensorbox-station.git
+
+if [ -d "sensorbox-station" ]; then
+  echo -e "sensorbox station already exists; pulling latest version from github\n"
+  cd sensorbox-station
+  git pull
+else
+  git clone https://github.com/davormalnar/sensorbox-station.git
+fi
 
 
 #
