@@ -35,6 +35,15 @@ source $HOME/.bashrc
 # lets configure RPi
 #
 
+
+echo -e "-> setting up timezone \n"
+read -e -p "Please enter your timezone (default): " -i "Europe/Zagreb" TIMEZONE
+sudo timedatectl set-timezone $TIMEZONE
+
+# lets restart cron so that the tasks we schedule will be set for the appropriate timezone
+echo -e "\n-> restarting cron service \n"
+sudo service cron restart
+
 echo -e "-> enabling SSH\n"
 sudo raspi-config nonint do_ssh 0
 
