@@ -1,6 +1,6 @@
 clear
 
-echo -e "Sensorbox v.1.0 \n"
+echo -e "Sensorbox v.1.1 \n"
 if [[ $SSH_CONNECTION != "" ]]; then
         neofetch
         echo " "

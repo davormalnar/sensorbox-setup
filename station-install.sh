@@ -88,7 +88,7 @@ echo -e "-> installing necessary packages\n"
 sudo apt install python3-pip i2c-tools python3-smbus neofetch git screen uptimed dnsutils speedtest-cli
 
 echo -e "-> installing necessary python libs\n"
-sudo pip3 install pyserial smbus pymongo meteocalc pyyaml
+sudo pip3 install pyserial smbus meteocalc pyyaml pyjwt requests
 
 #
 # create sensorbox folder and fetch scripts

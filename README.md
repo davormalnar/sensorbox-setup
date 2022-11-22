@@ -22,7 +22,7 @@ For more instruction on how to run and/or use Sensorbox-station please check pro
 * enables I2C and Serial
 * performs RPi update & upgrade
 * installs necessary and useful packages: `python3-pip i2c-tools python3-smbus neofetch git screen uptimed dnsutils speedtest-cli`
-* installs necessary Python libraries `pyserial smbus pymongo meteocalc pyyaml`
+* installs necessary Python libraries `pyserial smbus pyjwt requests meteocalc pyyaml`
 * fetches [Sensorbox station](https://github.com/davormalnar/sensorbox-station) script
 * adds new WiFi entries to `wpa_supplicant` configuration (optional)
 * adds crontab entries (optional) for:
