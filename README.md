@@ -35,8 +35,4 @@ For more instruction on how to run and/or use Sensorbox-station please check pro
 
 ### Tested Raspberry Pi versions ###
 
-* Raspberry Pi 2/3/4 model B
-* Raspberry Pi 1 model B (without camera feed)
-
-
-    
+* Raspberry Pi 2/3/4 model B    
